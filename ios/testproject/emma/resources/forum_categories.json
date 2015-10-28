@@ -1,0 +1,56 @@
+
+{
+  "version": 3.0,
+  "categories": [
+    {
+      "priority": 100,
+      "name": "Trying to Conceive",
+      "description": "Trying to conceive",
+      "icon": "community-room-ttc.png",
+      "background_color": "#5a62d2",
+      "id": 1,
+      "private": false,
+      "slug": "trying-to-conceive"
+    },
+    {
+      "priority": 80,
+      "name": "Success Stories",
+      "description": "You did it! Share your journey! Post your pictures!",
+      "icon": "community-room-success.png",
+      "background_color": "#ea4c89",
+      "id": 3,
+      "private": false,
+      "slug": "success-stories"
+    },
+    {
+      "priority": 80,
+      "name": "Avoiding Pregnancy",
+      "description": "Avoiding pregnancy",
+      "icon": "community-room-avoid.png",
+      "background_color": "#ffba4d",
+      "id": 6,
+      "private": false,
+      "slug": "avoiding-pregnancy"
+    },
+    {
+      "priority": 80,
+      "name": "Chit Chat",
+      "description": "Chit chat",
+      "icon": "community-room-general.png",
+      "background_color": "#6cba2d",
+      "id": 7,
+      "private": false,
+      "slug": "chit-chat"
+    },
+    {
+      "priority": 60,
+      "name": "Glow Support",
+      "description": "Glow support",
+      "icon": "community-room-tech.png",
+      "background_color": "#383838",
+      "id": 5,
+      "private": false,
+      "slug": "glow-support"
+    }
+  ]
+}

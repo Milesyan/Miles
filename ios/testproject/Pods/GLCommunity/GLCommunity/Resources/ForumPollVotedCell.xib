@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PollVotedCell" rowHeight="45" id="JG2-SE-yGG" customClass="ForumPollVotedCell">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JG2-SE-yGG" id="CPq-K0-EDi">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMq-Po-ZjU">
+                        <rect key="frame" x="0.0" y="12" width="209" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="P8c-Xm-qKR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4t-fN-Uwm" userLabel="bar background">
+                        <rect key="frame" x="0.0" y="34" width="280" height="6"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="qax-qs-vwz"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTH-Ki-rGG" userLabel="bar progress">
+                        <rect key="frame" x="0.0" y="34" width="140" height="6"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.38431372549999998" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" priority="250" constant="140" placeholder="YES" id="g5R-WK-k4H"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7q-cU-Znl">
+                        <rect key="frame" x="230" y="12" width="50" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ji3-do-dtB"/>
+                            <constraint firstAttribute="width" constant="50" id="k0R-C6-L3P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gl-community-check-green.png" translatesAutoresizingMaskIntoConstraints="NO" id="HtH-py-cTg">
+                        <rect key="frame" x="213" y="10" width="27" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25.5" id="OlT-6Z-Ta7"/>
+                            <constraint firstAttribute="width" constant="27" id="gts-Vw-lyT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="r7q-cU-Znl" secondAttribute="trailing" id="6ua-bT-CrG"/>
+                    <constraint firstAttribute="bottom" secondItem="I4t-fN-Uwm" secondAttribute="bottom" constant="4.5" id="OE3-io-ZV2"/>
+                    <constraint firstItem="MMq-Po-ZjU" firstAttribute="bottom" secondItem="I4t-fN-Uwm" secondAttribute="bottom" constant="-7" id="PBz-35-Mb8"/>
+                    <constraint firstItem="MMq-Po-ZjU" firstAttribute="leading" secondItem="CPq-K0-EDi" secondAttribute="leading" id="TiF-CA-DYl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="HtH-py-cTg" secondAttribute="bottom" constant="1" id="aRh-gY-R2Q"/>
+                    <constraint firstItem="I4t-fN-Uwm" firstAttribute="leading" secondItem="CPq-K0-EDi" secondAttribute="leading" id="bOc-Sk-bat"/>
+                    <constraint firstItem="HtH-py-cTg" firstAttribute="leading" secondItem="MMq-Po-ZjU" secondAttribute="trailing" constant="4" id="e24-uS-6cg"/>
+                    <constraint firstItem="r7q-cU-Znl" firstAttribute="leading" secondItem="HtH-py-cTg" secondAttribute="trailing" constant="-10" id="g0d-nX-Zqv"/>
+                    <constraint firstAttribute="trailing" secondItem="I4t-fN-Uwm" secondAttribute="trailing" id="gkt-3D-jWu"/>
+                    <constraint firstItem="GTH-Ki-rGG" firstAttribute="height" secondItem="I4t-fN-Uwm" secondAttribute="height" id="jlg-oe-Pfn"/>
+                    <constraint firstItem="GTH-Ki-rGG" firstAttribute="top" secondItem="I4t-fN-Uwm" secondAttribute="top" id="s3I-p4-uZm"/>
+                    <constraint firstItem="I4t-fN-Uwm" firstAttribute="top" secondItem="r7q-cU-Znl" secondAttribute="bottom" constant="1" id="vtQ-YY-CVH"/>
+                    <constraint firstItem="GTH-Ki-rGG" firstAttribute="leading" secondItem="I4t-fN-Uwm" secondAttribute="leading" id="vxJ-Yy-XVI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="barBackground" destination="I4t-fN-Uwm" id="Yfr-aI-Etg"/>
+                <outlet property="barProgress" destination="GTH-Ki-rGG" id="sos-bk-QDV"/>
+                <outlet property="checkImageView" destination="HtH-py-cTg" id="dfM-wx-WYW"/>
+                <outlet property="optionLabel" destination="MMq-Po-ZjU" id="L5l-C1-Wwg"/>
+                <outlet property="progressLabel" destination="r7q-cU-Znl" id="ZEA-gV-KGs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gl-community-check-green.png" width="37" height="37"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

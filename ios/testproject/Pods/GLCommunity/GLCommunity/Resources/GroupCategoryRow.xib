@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1792" defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="YOs-7X-DtG" customClass="GroupCategoryRow">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YOs-7X-DtG" id="uqq-2N-BBy">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlF-8t-z1Z" userLabel="color circle">
+                        <rect key="frame" x="20" y="7" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.38431372549999998" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="eTA-A8-IVh"/>
+                            <constraint firstAttribute="height" constant="30" id="rge-3U-dkK"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Not trying to conceive" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-tk-VqI">
+                        <rect key="frame" x="69" y="0.0" width="231" height="43"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mlF-8t-z1Z" firstAttribute="leading" secondItem="uqq-2N-BBy" secondAttribute="leading" constant="20" id="1A9-sJ-qud"/>
+                    <constraint firstAttribute="centerY" secondItem="mlF-8t-z1Z" secondAttribute="centerY" id="If3-fk-F0m"/>
+                    <constraint firstAttribute="trailing" secondItem="oKj-tk-VqI" secondAttribute="trailing" constant="20" id="S3B-Gu-K8A"/>
+                    <constraint firstItem="oKj-tk-VqI" firstAttribute="top" secondItem="uqq-2N-BBy" secondAttribute="top" id="SXM-C7-wIB"/>
+                    <constraint firstItem="oKj-tk-VqI" firstAttribute="leading" secondItem="mlF-8t-z1Z" secondAttribute="trailing" constant="19" id="lak-hR-RAt"/>
+                    <constraint firstAttribute="bottom" secondItem="oKj-tk-VqI" secondAttribute="bottom" constant="0.5" id="lqs-GV-UTy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="colorCircle" destination="mlF-8t-z1Z" id="Wtt-Z4-e4Z"/>
+                <outlet property="title" destination="oKj-tk-VqI" id="6pc-3W-s3Y"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

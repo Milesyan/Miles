@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MzN-Cp-UIf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Container View Controller-->
+        <scene sceneID="3OM-Y3-5mu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Fpo-fy-P7H" customClass="AlertContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94V-l6-L5I"/>
+                        <viewControllerLayoutGuide type="bottom" id="orB-Md-zaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0dX-BO-s1l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TyO-t8-MGm">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="DfU-rU-55F">
+                            <rect key="frame" x="12" y="7" width="296" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Notifications"/>
+                                <segment title="Reminders"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeAlertType:" destination="Fpo-fy-P7H" eventType="valueChanged" id="E7d-F1-XPl"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="DfU-rU-55F" id="Wg0-du-KAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDr-2Y-wQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="307"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="6gO-mU-VNW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MzN-Cp-UIf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VMG-WL-uiX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUK-Ah-MVf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fpo-fy-P7H" kind="relationship" relationship="rootViewController" id="udX-hH-Y0S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbf-0b-51D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="307"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

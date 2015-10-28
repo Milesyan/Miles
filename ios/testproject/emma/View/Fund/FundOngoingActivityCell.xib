@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </mutableArray>
+        <mutableArray key="ProximaNova-Light.otf">
+            <string>ProximaNova-Light</string>
+            <string>ProximaNova-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityCell" rowHeight="160" id="Bxu-IY-lR9" customClass="FundOngoingActivityCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bxu-IY-lR9" id="JzX-eL-mMb">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1W-AP-M6S">
+                        <rect key="frame" x="157" y="0.0" width="6" height="159"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.86274509799999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="6" id="qhz-rs-zgf"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vc5-ym-TAC">
+                        <rect key="frame" x="80" y="0.0" width="160" height="160"/>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.72941176470000002" blue="0.1764705882" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="Kmm-0i-3CQ"/>
+                            <constraint firstAttribute="height" constant="160" id="LMe-YE-LW7"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bT-5t-VyE">
+                        <rect key="frame" x="90" y="10" width="140" height="140"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Slightly active" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-2w-Hoc">
+                                <rect key="frame" x="0.0" y="32" width="140" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4hY-Zk-0jz"/>
+                                    <constraint firstAttribute="height" constant="70" id="yhu-YL-ppR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="30%" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="vc4-B5-2do" userLabel="Label - score label">
+                                <rect key="frame" x="0.0" y="69" width="140" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="PsL-fV-Xcx"/>
+                                    <constraint firstAttribute="height" constant="42" id="hQw-2z-RWa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="June" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="X23-ZT-y1z">
+                                <rect key="frame" x="0.0" y="25" width="140" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="INr-W2-Npa"/>
+                                    <constraint firstAttribute="width" constant="140" id="WRS-Ok-wwk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.72941176470000002" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X23-ZT-y1z" firstAttribute="top" secondItem="8bT-5t-VyE" secondAttribute="top" constant="25" id="AJT-w3-cgK"/>
+                            <constraint firstAttribute="centerX" secondItem="vc4-B5-2do" secondAttribute="centerX" id="BV8-HO-wAb"/>
+                            <constraint firstItem="EZb-2w-Hoc" firstAttribute="top" secondItem="8bT-5t-VyE" secondAttribute="top" constant="32" id="C9O-sA-HfY"/>
+                            <constraint firstItem="vc4-B5-2do" firstAttribute="top" secondItem="8bT-5t-VyE" secondAttribute="top" constant="69" id="N46-nu-jha"/>
+                            <constraint firstAttribute="centerX" secondItem="EZb-2w-Hoc" secondAttribute="centerX" id="UXp-83-ZTc"/>
+                            <constraint firstAttribute="centerX" secondItem="X23-ZT-y1z" secondAttribute="centerX" id="lQR-5U-vWZ"/>
+                            <constraint firstAttribute="height" constant="140" id="qHd-MA-TYf"/>
+                            <constraint firstAttribute="width" constant="140" id="rV9-nU-4PP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8bT-5t-VyE" firstAttribute="top" secondItem="JzX-eL-mMb" secondAttribute="top" constant="10" id="1qP-lZ-vIC"/>
+                    <constraint firstAttribute="bottom" secondItem="l1W-AP-M6S" secondAttribute="bottom" id="5qP-fM-w0o"/>
+                    <constraint firstAttribute="centerX" secondItem="Vc5-ym-TAC" secondAttribute="centerX" id="Fbg-br-jdd"/>
+                    <constraint firstAttribute="centerX" secondItem="8bT-5t-VyE" secondAttribute="centerX" id="He2-3g-pZl"/>
+                    <constraint firstItem="Vc5-ym-TAC" firstAttribute="top" secondItem="JzX-eL-mMb" secondAttribute="top" id="IcT-6y-1yi"/>
+                    <constraint firstAttribute="centerX" secondItem="l1W-AP-M6S" secondAttribute="centerX" id="Mmf-YG-Ma4"/>
+                    <constraint firstItem="l1W-AP-M6S" firstAttribute="top" secondItem="JzX-eL-mMb" secondAttribute="top" id="lHR-er-FtI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="activityLabel" destination="EZb-2w-Hoc" id="M83-cz-1kN"/>
+                <outlet property="bgCircle" destination="Vc5-ym-TAC" id="I9N-Ea-ycZ"/>
+                <outlet property="circle" destination="8bT-5t-VyE" id="CIP-vR-3VX"/>
+                <outlet property="monthLabel" destination="X23-ZT-y1z" id="DKb-zP-1Vv"/>
+                <outlet property="scoreLabel" destination="vc4-B5-2do" id="hcp-w5-vvB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

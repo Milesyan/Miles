@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="55t-y3-MZY" customClass="MedicalLogMedicationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55t-y3-MZY" id="zAX-3E-Wjk">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0M-no-tsY" userLabel="button check" customClass="PillButton">
+                        <rect key="frame" x="214" y="15" width="36" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="XKa-g2-nhT"/>
+                            <constraint firstAttribute="width" constant="36" id="uSL-0N-h1G"/>
+                        </constraints>
+                        <color key="tintColor" red="0.42352941179999998" green="0.72941176470000002" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button" image="check">
+                            <color key="titleColor" red="0.42352941179999998" green="0.72941176470000002" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="checkButtonClicked:" destination="55t-y3-MZY" eventType="touchUpInside" id="dkN-rY-kaF"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-c5-66M" userLabel="button cross" customClass="PillButton">
+                        <rect key="frame" x="264" y="15" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="bqx-Z3-pp5"/>
+                            <constraint firstAttribute="width" constant="36" id="uoq-5G-mlb"/>
+                        </constraints>
+                        <color key="tintColor" red="0.87058823529999996" green="0.25098039220000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button" image="cross">
+                            <color key="titleColor" red="0.87058823529999996" green="0.25098039220000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="crossButtonClicked:" destination="55t-y3-MZY" eventType="touchUpInside" id="yz3-O6-JfL"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Clomiphene citrate (Clomid®*)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="ixg-Ir-cYJ" customClass="UILinkLabel">
+                        <rect key="frame" x="16" y="14" width="190" height="38"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                        <color key="textColor" red="0.35294117650000001" green="0.38431372549999998" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ixg-Ir-cYJ" firstAttribute="leading" secondItem="zAX-3E-Wjk" secondAttribute="leading" constant="16" id="1UH-4w-ncH"/>
+                    <constraint firstAttribute="centerY" secondItem="kpM-c5-66M" secondAttribute="centerY" id="AsI-kb-oEK"/>
+                    <constraint firstItem="l0M-no-tsY" firstAttribute="leading" secondItem="ixg-Ir-cYJ" secondAttribute="trailing" constant="8" id="GBA-ZC-luT"/>
+                    <constraint firstAttribute="trailing" secondItem="kpM-c5-66M" secondAttribute="trailing" constant="20" id="Hyu-iK-5d5"/>
+                    <constraint firstItem="kpM-c5-66M" firstAttribute="leading" secondItem="l0M-no-tsY" secondAttribute="trailing" constant="14" id="bbt-Oi-cQV"/>
+                    <constraint firstAttribute="centerY" secondItem="ixg-Ir-cYJ" secondAttribute="centerY" id="hRt-qc-g9O"/>
+                    <constraint firstAttribute="centerY" secondItem="l0M-no-tsY" secondAttribute="centerY" id="zd6-hM-ETQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkButton" destination="l0M-no-tsY" id="v2T-lH-wSc"/>
+                <outlet property="crossButton" destination="kpM-c5-66M" id="2iz-GI-0Ps"/>
+                <outlet property="titleLabel" destination="ixg-Ir-cYJ" id="A80-x7-arC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="37" height="37"/>
+        <image name="cross" width="37" height="37"/>
+    </resources>
+</document>

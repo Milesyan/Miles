@@ -1,0 +1,66 @@
+<html>
+    
+    <head>
+        <script type="text/javascript">
+            #@javascript@#
+        </script>
+        <script type="text/javascript">
+            
+            document.addEventListener("DOMContentLoaded", docReady = function() {
+                                      document.removeEventListener("DOMContentLoaded", docReady);
+                                      sizeChanged();
+                                      var imgs = document.getElementsByTagName('img');
+                                      for (var i = 0; i < imgs.length; i++)
+                                      {
+                                      
+                                      imgs[i].onclick = function(event) {imageTapped(event.target);};
+                                      }
+                                      });
+                                      
+                                      window.onload = function() { sizeChanged(); }
+                                      
+                                      function imageTapped(img)
+                                      {
+                                          var url = img.src;
+                                          linkHelper("showimage://"+escape(url));
+                                      }
+        
+        function OnImageLoad(evt) {
+            aspectFillImage(evt.currentTarget);
+        }
+        </script>
+        
+        <style type="text/css">
+            
+            body { background-color: transparent; padding: 0; margin: 0; }
+            
+            html { background-color: transparent; padding: 0; margin: 0; }
+            
+            div#content { font-family: "ProximaNova-Regular"; font-size: 18px; line-height: 1.4; color: black; background-color: transparent; min-height: 50%; width: 100%; float: left;word-wrap:break-word}
+            
+            div#content a { color: #5a62d2; text-decoration: underline; }
+            
+            div#content p { margin: 0 0 0.7em 0; }
+            
+            * { cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; }
+            
+            ul { padding: 0 0 0 20px; }
+            dl { padding: 0; margin: 0; }
+            dt { padding: 0; margin: 0 0 20px 0; font-family: "ProximaNova-Semibold"; }
+            dd { padding: 0; margin: 0; }
+            h1 { font-family: "ProximaNova-Semibold"; font-size: 22px; padding: 20px 0px 10px 0px; color: #000; }
+            h2 { font-family: "ProximaNova-Semibold"; font-size: 18px; padding: 10px 0px; color: #000; }
+            h3 { font-family: "ProximaNova-Semibold"; font-size: 18px; padding: 10px 0px; color: #000; }
+            
+            </style>
+        
+    </head>
+    
+    <body>
+        <div id="content" class="content">
+            
+            #@content@#
+            
+        </div>
+    </body>
+</html>

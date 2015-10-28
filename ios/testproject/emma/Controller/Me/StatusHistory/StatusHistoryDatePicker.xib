@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusHistoryDatePicker">
+            <connections>
+                <outlet property="datePicker" destination="75K-DL-xdL" id="r5s-NH-Ydp"/>
+                <outlet property="descriptionLabel" destination="P3Q-gx-02Q" id="jcR-bx-g2d"/>
+                <outlet property="topLabel" destination="r4Y-EK-0wv" id="2WX-a0-Yzh"/>
+                <outlet property="view" destination="WMe-ec-CGZ" id="gvG-2E-Acz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WMe-ec-CGZ" userLabel="view">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="290"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Treatment start day" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="r4Y-EK-0wv" userLabel="title">
+                    <rect key="frame" x="15" y="11" width="157" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="157" id="4aI-hi-5ra"/>
+                        <constraint firstAttribute="height" constant="21" id="rvp-2D-t1i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="75K-DL-xdL">
+                    <rect key="frame" x="0.0" y="74" width="320" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="tle-w5-kGK"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="-650928059.80652905">
+                        <!--1980-05-17 02:39:00 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOC-Ww-Wbo">
+                    <rect key="frame" x="275" y="38" width="37" height="30"/>
+                    <state key="normal" title="Done">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doneClicked:" destination="-1" eventType="touchUpInside" id="vu3-xl-gIk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-Fk-1BB">
+                    <rect key="frame" x="211" y="38" width="48" height="30"/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="WSC-m1-Ogw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These are the dates of your treatment protocol. It's okay to approximate and update later" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3Q-gx-02Q">
+                    <rect key="frame" x="15" y="32" width="180" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="b7a-YP-PvY"/>
+                        <constraint firstAttribute="height" constant="42" id="cbH-4r-DFM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="r4Y-EK-0wv" firstAttribute="leading" secondItem="P3Q-gx-02Q" secondAttribute="leading" id="2c3-h5-mKF"/>
+                <constraint firstAttribute="trailing" secondItem="75K-DL-xdL" secondAttribute="trailing" id="9Vb-NO-hzo"/>
+                <constraint firstItem="XOC-Ww-Wbo" firstAttribute="leading" secondItem="CB0-Fk-1BB" secondAttribute="trailing" constant="16" id="CZo-9c-chd"/>
+                <constraint firstAttribute="trailing" secondItem="XOC-Ww-Wbo" secondAttribute="trailing" constant="8" id="DCk-WP-3Uk"/>
+                <constraint firstItem="75K-DL-xdL" firstAttribute="top" secondItem="P3Q-gx-02Q" secondAttribute="bottom" id="IJb-0u-gcK"/>
+                <constraint firstItem="P3Q-gx-02Q" firstAttribute="top" secondItem="r4Y-EK-0wv" secondAttribute="bottom" id="V2v-Xe-Mpv"/>
+                <constraint firstItem="CB0-Fk-1BB" firstAttribute="centerY" secondItem="P3Q-gx-02Q" secondAttribute="centerY" id="XGc-Wz-phc"/>
+                <constraint firstItem="XOC-Ww-Wbo" firstAttribute="centerY" secondItem="CB0-Fk-1BB" secondAttribute="centerY" id="bn0-El-VRZ"/>
+                <constraint firstAttribute="bottom" secondItem="75K-DL-xdL" secondAttribute="bottom" id="cqc-Dw-nPD"/>
+                <constraint firstItem="75K-DL-xdL" firstAttribute="leading" secondItem="WMe-ec-CGZ" secondAttribute="leading" id="dgN-f2-IFJ"/>
+                <constraint firstItem="r4Y-EK-0wv" firstAttribute="leading" secondItem="WMe-ec-CGZ" secondAttribute="leading" constant="15" id="vqr-0u-psE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="102" y="30.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

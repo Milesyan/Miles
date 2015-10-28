@@ -1,0 +1,293 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+
+    document.addEventListener("DOMContentLoaded", docReady = function() {
+        document.removeEventListener("DOMContentLoaded", docReady);
+
+        //do a manual track of a touch (way faster than onclick), and figure out if the user tapped the body so we should becomeFirstResponder
+        var touchMoved = false;
+
+        document.addEventListener("touchstart", function(event) {
+            touchMoved = false;
+        });
+
+        document.addEventListener("touchmove", function(event) {
+            touchMoved = true;
+        });
+
+        document.addEventListener("touchend", function(event) {
+
+            //if the starting touch hasn't moved and the keyboard isn't already up then becomeFirstResponder
+            if (!touchMoved) {
+                var activeElement = document.activeElement;
+                if (activeElement.id !== "content") {
+                                  becomeFirstResponder();
+                }
+            }
+        });
+    });
+
+    function insertImage(attId, src, filename) {
+        //insert an image with our attachment class and call delayedTextDidChange() cause it takes a little bit for the web view to update its size. empty character span at the end makes autoscrolling work
+        var html = "<br><img id=\"" + attId + "\" src=\"" + src + "\" /><div><br></div>";
+        document.execCommand("InsertHTML", false, html);
+        delayedTextDidChange();
+    }
+
+    function insertText(text) {
+        document.execCommand("InsertHTML", false, text);
+    }
+
+    //linkHelper is a method to send 'link' to objective-C; an iframe is created with the link, so it is sent back to iOS land, and then immediately removed; only way to call URL and still preserve all the HTML
+
+    function linkHelper(link) {
+        var iframe = document.createElement("IFRAME");
+        iframe.setAttribute("src", link);
+        document.documentElement.appendChild(iframe);
+        iframe.parentNode.removeChild(iframe);
+        iframe = null;
+    }
+
+    //decode the url parameter passed in (replace percent encodings, etc.)
+
+    function urlDecode(str) {
+        return decodeURIComponent((str + '').replace(/\+/g, '%20'));
+    }
+
+    //returns the current selection range
+
+    function getRange() {
+        if (document.selection) {
+            return document.selection.createRange();
+        } else {
+            var selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                return selection.getRangeAt(0);
+            }
+        }
+    }
+
+    //returns whatever DOM node currently contains the cursor
+
+    function getNodeContainingCursor() {
+        if (document.selection) {
+            return getRange().parentElement();
+        } else {
+            var range = getRange();
+            if (range !== undefined) {
+                return range.startContainer.parentNode;
+            }
+        }
+        return false;
+    }
+
+    //tell iOS that this is a delayedTextDidChange() (it'll wait a small amount of time then redraw)
+
+    function delayedTextDidChange() {
+        var url = "delayedtextdidchange://";
+        linkHelper(url);
+    }
+
+    //find the y coordinate of the given element
+
+    function findPosY(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            while (1) {
+                curtop += obj.offsetTop;
+                if (!obj.offsetParent)
+                    break;
+                obj = obj.offsetParent;
+            }
+        } else if (obj.y) {
+            curtop += obj.y;
+        }
+        return curtop;
+    }
+
+    function getYCoordOfCursor(retKey) {
+        var y = 0;
+        
+        if (retKey) {
+            document.execCommand("InsertHTML", false, "<div id=\"mb\">\u200B\n</div>");
+            y = getYCoordOfCursor(false);
+        } else {
+            y = findPosY(getNodeContainingCursor());
+        }
+        
+        return y;
+    }
+
+    //get the scrollHeight of the contentDiv and tell iOS that we've changed to that height
+
+    function textDidChange(e) {
+        var height = document.getElementById("content").scrollHeight;
+        var retKey = false;
+        if (e) {
+            if (e.keyCode == 13) {
+                retKey = true;
+            }
+        }
+        var cursorHeight = getYCoordOfCursor(retKey);
+
+        var url = "textdidchange://" + height + "/" + cursorHeight;
+        linkHelper(url);
+    }
+
+    //tell iOS that we've become first responder and tell it to redraw after a delay
+
+    function didBecomeFirstResponder() {
+        linkHelper("keyboarddidshow://");
+    }
+
+    //find the content div and focus() on it (works in iOS6)
+
+    function becomeFirstResponder() {
+        var div = document.getElementById("content");
+        div.focus();
+    }
+
+    //tell iOS that we've lost focus (so the keyboard for us is going away)
+
+    function didBlur() {
+        linkHelper("didblur://")
+    }
+
+    function getText() {
+        var conversationText = document.getElementById("content").innerHTML.toString();
+        return conversationText;
+    }
+
+    function fixPasteStylings() {
+        //go through all the font tags and accumulate them and the children they should be replaced with (can't do it in one swoop because we can't modify an array while iterating it)
+        var fontTags = document.getElementsByTagName("font");
+        var children = [];
+        var tagsToReplace = [];
+        for (i = 0; i < fontTags.length; i++) {
+            var fontTag = fontTags[i];
+            //font tags will only have one child that they're wrapping
+            if (fontTag.childNodes.length === 1) {
+                var child = fontTag.childNodes[0];
+                children.push(child);
+                tagsToReplace.push(fontTag);
+            }
+
+            //if there aren't any children of this font tag then just remove it
+            else {
+                fontTag.parentNode.removeChild(fontTag);
+            }
+        }
+
+        //go through and replace the font tags with their children so everything looks like exactly what the user pasted
+        for (i = 0; i < children.length; i++) {
+            var fontTag = tagsToReplace[i];
+            var child = children[i];
+            fontTag.parentNode.replaceChild(child, fontTag);
+
+            //move the selection to the end of the last child
+            if (i === children.length - 1) {
+                var selectedNode = child.parentNode;
+                selectedNode.focus();
+                var range = document.createRange();
+                range.selectNodeContents(selectedNode);
+                range.collapse(false);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+    }
+
+    //insert dummy empty span at the current position so we know where the cursor was
+
+    function saveCursorPosition() {
+        //don't save position if we're not active
+        var content = document.getElementById("content");
+        if (document.activeElement !== content) {
+            return;
+        }
+        var html = "<span id=\"mailbox-dummy-tag\"></span>";
+        document.execCommand("InsertHTML", false, html);
+    }
+
+    //recall where the cursor was based on the dummy empty span and put the cursor there
+
+    function recallCursorPosition() {
+        if (!getNodeContainingCursor()) {
+            becomeFirstResponder();
+        }
+
+        var dummyTag = document.getElementById("mailbox-dummy-tag");
+        if (dummyTag) {
+            var range = document.createRange();
+            range.setStartAfter(dummyTag);
+            range.collapse(true);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            dummyTag.parentNode.removeChild(dummyTag);
+        } else {
+
+            //if there is no saved cursor position just move it to the end
+            var content = document.getElementById("content");
+            content.focus();
+            var range = document.createRange();
+            range.selectNodeContents(content);
+            range.collapse(false);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    }
+    </script>
+
+    <style type="text/css">
+    /* make the background transparent and don't darken when the user taps on us*/
+    body {
+        background-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+        height: 63px;
+        padding: 0;
+        margin: 0;
+    }
+    html {
+        padding: 0;
+        margin: 0;
+    }
+    /* make the background transparent and don't let us grow shorter than 63px or wider than 304px*/
+    div#content {
+        font-family:"ProximaNova-Regular";
+        font-size: 18px;
+        color: black;
+        background-color: transparent;
+        min-height: 50%;
+        width: 100%;
+        float: left;
+    }
+    /* any images that are added as attachments are on there own lines, 10px inset on the sides, and can only be 284px (10 + 284 + 10 = 304, which is our max width)*/
+    #content img {
+        display: block;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    * {
+        /* Won't have any effect visually but causes Mobile Safari to detect touches on the body/document level so we need this to do the body tap to open detail view */
+        cursor: pointer;
+    }
+    /* iPad only stylings */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        div#content {
+            font-size: 17px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="content" onfocus="didBecomeFirstResponder()" contenteditable="true" onkeyup="textDidChange(event)" onblur="didBlur()"></div>
+</body>
+
+</html>

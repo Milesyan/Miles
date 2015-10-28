@@ -1,0 +1,83 @@
+<html>
+
+<head>
+
+<script src="appresource://img.js"></script>
+<script src="appresource://common.js"></script>
+
+<script type="text/javascript">
+
+document.addEventListener("DOMContentLoaded", docReady = function()
+                          {
+                            document.removeEventListener("DOMContentLoaded", docReady);
+                            domReady();
+                            sizeChanged();
+                            var imgs = document.getElementsByTagName('img');
+                            for (var i = 0; i < imgs.length; i++)
+                            {
+                                imgs[i].onclick = function(event) {imageTapped(event.target); };
+                                imgs[i].onerror = function() {sizeChanged(); };
+                            }
+                            sizeChanged();
+                          
+                          }//end of function
+                          );
+                 
+function domChanged()
+                 {
+                     logInfo("Dom changed");
+                     sizeChanged();
+                 }
+
+function OnImageLoad(evt)
+{
+    aspectFillImage(evt.currentTarget);
+}
+
+function imageTapped(img)
+{
+    var url = img.src;
+    linkHelper("showimage://"+escape(url));
+}
+
+</script>
+
+<style type="text/css">
+
+body { background-color: transparent; padding: 0; margin: 0; }
+
+html { background-color: transparent; padding: 0; margin: 0; }
+
+div#content {
+    word-wrap:break-word;
+    font-family: "ProximaNova-Regular";
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+    background-color:
+    min-height: 50%;
+    width: 100%;
+    float: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+div#content a { color: #5a62d2; text-decoration: underline; }
+
+div#content p { margin: 0 0 0.7em 0; }
+
+
+* { cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="content" class="content">
+
+#@content@#
+
+</div></body></html>

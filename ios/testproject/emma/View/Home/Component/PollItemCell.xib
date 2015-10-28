@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PollItem" rowHeight="271" id="KGk-i7-Jjw" customClass="PollItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-qh-jQR">
+                        <rect key="frame" x="8" y="12" width="304" height="258"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWR-7S-Nhy" userLabel="View - health poll header" customClass="HomeCardHeaderView">
+                                <rect key="frame" x="15" y="0.0" width="274" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rXX-uT-OzK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Glow Community Poll"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="home-card-poll"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-PL-ek5" userLabel="Title">
+                                <rect key="frame" x="15" y="45" width="274" height="18"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="fwm-Cb-D4n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-r0-caf" userLabel="Like and comments">
+                                <rect key="frame" x="15" y="183" width="274" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="pkq-ux-Gmb"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="13 Likes">
+                                        <attributes>
+                                            <color key="NSColor" red="0.35294117650000001" green="0.38431372549999998" blue="0.82352941180000006" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4r-bv-xeZ" customClass="HomeCardOperationButton">
+                                <rect key="frame" x="-8" y="215" width="320" height="43"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="yz6-7c-bc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Join the discussion" image="home-card-button-talk">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.38431372549999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="readmoreButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SpO-6R-ViO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUq-RG-14R" userLabel="View - poll">
+                                <rect key="frame" x="16" y="73" width="272" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PEQ-98-6U1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AUq-RG-14R" firstAttribute="top" secondItem="kaM-PL-ek5" secondAttribute="bottom" constant="10" id="3sT-yH-pK9"/>
+                            <constraint firstAttribute="trailing" secondItem="AUq-RG-14R" secondAttribute="trailing" constant="16" id="4vO-OI-Nbd"/>
+                            <constraint firstAttribute="trailing" secondItem="gWR-7S-Nhy" secondAttribute="trailing" constant="15" id="6e6-Zy-tXW"/>
+                            <constraint firstAttribute="trailing" secondItem="2aI-r0-caf" secondAttribute="trailing" constant="15" id="925-WZ-Qai"/>
+                            <constraint firstItem="kaM-PL-ek5" firstAttribute="leading" secondItem="AZZ-qh-jQR" secondAttribute="leading" constant="15" id="Lfn-pO-oiY"/>
+                            <constraint firstAttribute="trailing" secondItem="kaM-PL-ek5" secondAttribute="trailing" constant="15" id="MWl-JU-kQD"/>
+                            <constraint firstAttribute="trailing" secondItem="T4r-bv-xeZ" secondAttribute="trailing" constant="-8" id="W8N-R5-owu"/>
+                            <constraint firstAttribute="bottom" secondItem="T4r-bv-xeZ" secondAttribute="bottom" id="XUd-iP-Ri0"/>
+                            <constraint firstItem="T4r-bv-xeZ" firstAttribute="leading" secondItem="AZZ-qh-jQR" secondAttribute="leading" constant="-8" id="brN-Of-bqg"/>
+                            <constraint firstItem="gWR-7S-Nhy" firstAttribute="leading" secondItem="AZZ-qh-jQR" secondAttribute="leading" constant="15" id="cUw-cb-Vkq"/>
+                            <constraint firstItem="AUq-RG-14R" firstAttribute="leading" secondItem="AZZ-qh-jQR" secondAttribute="leading" constant="16" id="daa-LO-4sl"/>
+                            <constraint firstItem="gWR-7S-Nhy" firstAttribute="top" secondItem="AZZ-qh-jQR" secondAttribute="top" id="dnu-8o-Ksx"/>
+                            <constraint firstItem="2aI-r0-caf" firstAttribute="leading" secondItem="AZZ-qh-jQR" secondAttribute="leading" constant="15" id="i5j-Dw-imW"/>
+                            <constraint firstItem="2aI-r0-caf" firstAttribute="top" secondItem="AUq-RG-14R" secondAttribute="bottom" constant="10" id="yTt-4j-bQD"/>
+                            <constraint firstItem="kaM-PL-ek5" firstAttribute="top" secondItem="gWR-7S-Nhy" secondAttribute="bottom" constant="15" id="zjZ-OC-3Ox"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="AZZ-qh-jQR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Bav-I1-rnc"/>
+                    <constraint firstAttribute="bottom" secondItem="AZZ-qh-jQR" secondAttribute="bottom" id="CLg-ku-2MC"/>
+                    <constraint firstItem="AZZ-qh-jQR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="QKF-zg-H1x"/>
+                    <constraint firstAttribute="trailing" secondItem="AZZ-qh-jQR" secondAttribute="trailing" constant="8" id="v32-Oo-18a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="likeTextLabel" destination="2aI-r0-caf" id="tww-gg-nF5"/>
+                <outlet property="pollContainer" destination="AUq-RG-14R" id="Zsg-Nk-c7D"/>
+                <outlet property="pollViewHeight" destination="PEQ-98-6U1" id="B5h-zp-vY9"/>
+                <outlet property="readmoreButton" destination="T4r-bv-xeZ" id="6mq-fO-cET"/>
+                <outlet property="titleLabel" destination="kaM-PL-ek5" id="lb2-f7-a1b"/>
+                <outlet property="titleLabelHeight" destination="fwm-Cb-D4n" id="AJs-sT-PHf"/>
+                <outlet property="whiteBackgroundView" destination="AZZ-qh-jQR" id="xze-4d-cod"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="176.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home-card-button-talk" width="18" height="18"/>
+        <image name="home-card-poll" width="16" height="16"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

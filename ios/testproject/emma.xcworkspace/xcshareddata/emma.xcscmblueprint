@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77486AD480B89B0A394ED2A995CF582418BCBF35",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "18058AD75F9117166BF9971195744169142DC92C" : 0,
+    "19AC4776968B0391258A87400E3CC9FF5BD5047A" : 0,
+    "AF525DC26EFFDC76653A7FD26CCA6C57F9747165" : 0,
+    "3B4C4F75A1C2600325D850968DEAC83D1318C99B" : 0,
+    "77486AD480B89B0A394ED2A995CF582418BCBF35" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "48B10DD6-5D03-46B1-BDCC-2C74BA54287D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "18058AD75F9117166BF9971195744169142DC92C" : "GLPeriodEditor",
+    "19AC4776968B0391258A87400E3CC9FF5BD5047A" : "GLQuestionKit",
+    "AF525DC26EFFDC76653A7FD26CCA6C57F9747165" : "GLCommunity-iOS",
+    "3B4C4F75A1C2600325D850968DEAC83D1318C99B" : "GLFoundation-iOS",
+    "77486AD480B89B0A394ED2A995CF582418BCBF35" : "emma"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "emma",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/emma.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:upwlabs\/GLPeriodEditor.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "18058AD75F9117166BF9971195744169142DC92C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:upwlabs\/GLQuestionKit-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19AC4776968B0391258A87400E3CC9FF5BD5047A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:upwlabs\/GLFoundation-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B4C4F75A1C2600325D850968DEAC83D1318C99B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:upwlabs\/emma.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77486AD480B89B0A394ED2A995CF582418BCBF35"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:upwlabs\/GLCommunity-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF525DC26EFFDC76653A7FD26CCA6C57F9747165"
+    }
+  ]
+}

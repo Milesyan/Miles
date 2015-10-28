@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EthnicityPicker">
+            <connections>
+                <outlet property="pickerView" destination="w5G-L4-o9H" id="8Fg-8S-YAi"/>
+                <outlet property="view" destination="gyc-Gu-Onu" id="p8e-4g-Scd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gyc-Gu-Onu">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHG-OJ-ARF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="NDZ-lz-pT0"/>
+                        <barButtonItem title="Cancel" id="mnu-UL-s1z" customClass="FontReplaceableBarButtonItem">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="-1" id="mp4-bZ-dfI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Done" style="done" id="TSy-m2-V9P" customClass="FontReplaceableBarButtonItem">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" id="2GV-ST-jCE"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5G-L4-o9H">
+                    <rect key="frame" x="0.0" y="44" width="320" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="DLe-zz-zdU"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LmE-Y9-vyX"/>
+                        <outlet property="delegate" destination="-1" id="A9w-K2-0Lq"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="w5G-L4-o9H" secondAttribute="bottom" id="1Hh-On-oBY"/>
+                <constraint firstItem="w5G-L4-o9H" firstAttribute="top" secondItem="uHG-OJ-ARF" secondAttribute="bottom" id="7ZL-yk-lLW"/>
+                <constraint firstAttribute="trailing" secondItem="w5G-L4-o9H" secondAttribute="trailing" id="K12-zE-hB0"/>
+                <constraint firstItem="uHG-OJ-ARF" firstAttribute="leading" secondItem="gyc-Gu-Onu" secondAttribute="leading" id="NFi-Rr-GuT"/>
+                <constraint firstAttribute="trailing" secondItem="uHG-OJ-ARF" secondAttribute="trailing" id="aF2-YT-a9i"/>
+                <constraint firstItem="w5G-L4-o9H" firstAttribute="leading" secondItem="gyc-Gu-Onu" secondAttribute="leading" id="dwU-dJ-J47"/>
+                <constraint firstItem="uHG-OJ-ARF" firstAttribute="top" secondItem="gyc-Gu-Onu" secondAttribute="top" id="hcZ-6K-O1R"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="539" y="530"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

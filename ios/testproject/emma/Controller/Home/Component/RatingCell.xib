@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="243" id="KGk-i7-Jjw" customClass="RatingCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPU-uO-mOi">
+                        <rect key="frame" x="8" y="12" width="304" height="237"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoying Glow?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xl9-G4-4iu">
+                                <rect key="frame" x="16" y="13" width="272" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="QRu-au-oEs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKJ-AK-0aI">
+                                <rect key="frame" x="162" y="62" width="122" height="45"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6gK-aW-PG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-GU-1hA">
+                                <rect key="frame" x="20" y="62" width="122" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="htq-vO-zOK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Not really">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nHb-He-eqo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating-hands" translatesAutoresizingMaskIntoConstraints="NO" id="1cU-0Y-zMl">
+                                <rect key="frame" x="0.0" y="137" width="304" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="1cU-0Y-zMl" secondAttribute="width" multiplier="25:76" id="6rK-PO-QIZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="FTy-Ce-hc8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xl9-G4-4iu" firstAttribute="top" secondItem="BPU-uO-mOi" secondAttribute="top" constant="13" id="43I-bZ-rTB"/>
+                            <constraint firstItem="tKJ-AK-0aI" firstAttribute="centerY" secondItem="iV9-GU-1hA" secondAttribute="centerY" id="4WS-72-qwa"/>
+                            <constraint firstItem="tKJ-AK-0aI" firstAttribute="width" secondItem="iV9-GU-1hA" secondAttribute="width" id="8mS-AJ-LHm"/>
+                            <constraint firstAttribute="centerX" secondItem="Xl9-G4-4iu" secondAttribute="centerX" id="BEj-2c-v9I"/>
+                            <constraint firstItem="tKJ-AK-0aI" firstAttribute="leading" secondItem="iV9-GU-1hA" secondAttribute="trailing" constant="20" id="BM5-i2-CCw"/>
+                            <constraint firstItem="Xl9-G4-4iu" firstAttribute="leading" secondItem="BPU-uO-mOi" secondAttribute="leading" constant="16" id="E6N-QU-Qs5"/>
+                            <constraint firstAttribute="bottom" secondItem="1cU-0Y-zMl" secondAttribute="bottom" id="JkS-bR-ru8"/>
+                            <constraint firstItem="iV9-GU-1hA" firstAttribute="leading" secondItem="BPU-uO-mOi" secondAttribute="leading" constant="20" id="Mmo-0H-faP"/>
+                            <constraint firstAttribute="trailing" secondItem="Xl9-G4-4iu" secondAttribute="trailing" constant="16" id="Nqu-Nb-mFz"/>
+                            <constraint firstAttribute="trailing" secondItem="1cU-0Y-zMl" secondAttribute="trailing" id="PRi-OE-Ss9"/>
+                            <constraint firstItem="iV9-GU-1hA" firstAttribute="top" secondItem="Xl9-G4-4iu" secondAttribute="bottom" constant="11" id="ZHq-g0-X6p"/>
+                            <constraint firstItem="1cU-0Y-zMl" firstAttribute="leading" secondItem="BPU-uO-mOi" secondAttribute="leading" id="hBa-hK-t1O"/>
+                            <constraint firstAttribute="trailing" secondItem="tKJ-AK-0aI" secondAttribute="trailing" constant="20" id="qk6-VI-7Mx"/>
+                            <constraint firstItem="tKJ-AK-0aI" firstAttribute="height" secondItem="iV9-GU-1hA" secondAttribute="height" id="unv-Um-X8L"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BPU-uO-mOi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PQY-gc-qtQ"/>
+                    <constraint firstItem="BPU-uO-mOi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ZrL-9J-gty"/>
+                    <constraint firstAttribute="trailing" secondItem="BPU-uO-mOi" secondAttribute="trailing" constant="8" id="b1m-PI-sTR"/>
+                    <constraint firstAttribute="bottom" secondItem="BPU-uO-mOi" secondAttribute="bottom" id="x2V-8X-oVD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="containerView" destination="BPU-uO-mOi" id="FIc-Z7-CJa"/>
+                <outlet property="label" destination="Xl9-G4-4iu" id="o1B-RC-4qw"/>
+                <outlet property="leftButton" destination="iV9-GU-1hA" id="Z4D-LD-CEc"/>
+                <outlet property="rightButton" destination="tKJ-AK-0aI" id="G9d-cE-wPM"/>
+            </connections>
+            <point key="canvasLocation" x="423" y="527"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rating-hands" width="304" height="102"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

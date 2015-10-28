@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="blurringCoverView" destination="hRt-IP-7Om" id="FKe-sH-JG1"/>
+                <outlet property="blurringCoverViewBottomConstraint" destination="7BT-SS-jSD" id="MeT-Uz-Aqg"/>
+                <outlet property="calendarCell" destination="47" id="60"/>
+                <outlet property="infiniteScrollView" destination="l62-hG-qLb" id="pE5-pn-GJd"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userGuides>
+                <userLayoutGuide location="284" affinity="minY"/>
+                <userLayoutGuide location="160" affinity="minX"/>
+                <userLayoutGuide location="160" affinity="minX"/>
+                <userLayoutGuide location="284" affinity="minY"/>
+            </userGuides>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-babies.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="PPZ-Na-vS8">
+                    <rect key="frame" x="0.0" y="-240" width="320" height="480"/>
+                    <animations/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-babies.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="n92-W2-ezE">
+                    <rect key="frame" x="0.0" y="-240" width="320" height="480"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="480" id="BIP-H1-6uz"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRt-IP-7Om">
+                    <rect key="frame" x="0.0" y="190" width="320" height="50"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="El3-t8-BO1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l62-hG-qLb" customClass="GLInfiniteScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l62-hG-qLb" firstAttribute="top" secondItem="1" secondAttribute="top" id="16h-y8-9V4"/>
+                <constraint firstAttribute="trailing" secondItem="l62-hG-qLb" secondAttribute="trailing" id="6zE-2V-D5F"/>
+                <constraint firstItem="hRt-IP-7Om" firstAttribute="bottom" secondItem="n92-W2-ezE" secondAttribute="bottom" id="7BT-SS-jSD"/>
+                <constraint firstItem="n92-W2-ezE" firstAttribute="bottom" secondItem="1" secondAttribute="top" constant="240" id="FJH-ga-0KA"/>
+                <constraint firstItem="PPZ-Na-vS8" firstAttribute="top" secondItem="n92-W2-ezE" secondAttribute="top" id="FOj-Va-s2z"/>
+                <constraint firstItem="hRt-IP-7Om" firstAttribute="trailing" secondItem="n92-W2-ezE" secondAttribute="trailing" id="OJo-KR-4e6"/>
+                <constraint firstItem="hRt-IP-7Om" firstAttribute="leading" secondItem="n92-W2-ezE" secondAttribute="leading" id="RFd-jc-cH4"/>
+                <constraint firstAttribute="trailing" secondItem="n92-W2-ezE" secondAttribute="trailing" id="aDb-hI-sMK"/>
+                <constraint firstAttribute="bottom" secondItem="l62-hG-qLb" secondAttribute="bottom" id="evf-VI-LcH"/>
+                <constraint firstItem="n92-W2-ezE" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="j7V-x7-UGl"/>
+                <constraint firstItem="PPZ-Na-vS8" firstAttribute="leading" secondItem="n92-W2-ezE" secondAttribute="leading" id="l67-Cr-ovE"/>
+                <constraint firstItem="l62-hG-qLb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="oZt-Xy-7gq"/>
+                <constraint firstItem="PPZ-Na-vS8" firstAttribute="bottom" secondItem="n92-W2-ezE" secondAttribute="bottom" id="pBG-2S-o20"/>
+                <constraint firstItem="PPZ-Na-vS8" firstAttribute="trailing" secondItem="n92-W2-ezE" secondAttribute="trailing" id="qmb-LG-fgG"/>
+            </constraints>
+            <point key="canvasLocation" x="1012" y="395"/>
+        </view>
+        <tableViewCell autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="47" userLabel="CalendarCell" customClass="CalendarCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="47" id="crV-Zt-Oxw">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21" userLabel="CalendarContainer">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62" userLabel="Pull down indicator">
+                                <rect key="frame" x="20" y="-40" width="280" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pull to switch calendar view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64">
+                                        <rect key="frame" x="29" y="6" width="223" height="19"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="2uL-gp-qnb"/>
+                                            <constraint firstAttribute="width" constant="223" id="eXU-DQ-o4Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="pulldown-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="69">
+                                        <rect key="frame" x="0.0" y="3" width="25" height="25"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="DI2-jX-axe"/>
+                                            <constraint firstAttribute="height" constant="25" id="qGj-ng-OAt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I81-9a-bz8"/>
+                                    <constraint firstAttribute="centerY" secondItem="69" secondAttribute="centerY" id="UXS-bf-zy8"/>
+                                    <constraint firstItem="69" firstAttribute="leading" secondItem="62" secondAttribute="leading" id="ZrC-cm-bmn"/>
+                                    <constraint firstAttribute="centerX" secondItem="64" secondAttribute="centerX" id="pgb-d1-q3c"/>
+                                    <constraint firstAttribute="width" constant="280" id="uXR-TM-Niq"/>
+                                    <constraint firstAttribute="centerY" secondItem="64" secondAttribute="centerY" id="uY6-5D-VHw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23" customClass="TinyCalendarView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="puK-wg-vvM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22" customClass="CKCalendarView">
+                                <rect key="frame" x="0.0" y="-312" width="320" height="292"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="292" id="tNy-0o-jIo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="23" firstAttribute="top" secondItem="21" secondAttribute="top" id="15i-MW-3RN"/>
+                            <constraint firstItem="22" firstAttribute="leading" secondItem="21" secondAttribute="leading" id="Sv5-Nu-15l"/>
+                            <constraint firstItem="23" firstAttribute="leading" secondItem="21" secondAttribute="leading" id="cPi-ol-CJf"/>
+                            <constraint firstItem="22" firstAttribute="top" secondItem="21" secondAttribute="top" constant="-312" id="clv-A4-wR8"/>
+                            <constraint firstItem="62" firstAttribute="top" secondItem="21" secondAttribute="top" constant="-40" id="fmV-zV-ueU"/>
+                            <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" id="nf6-3G-Xw1"/>
+                            <constraint firstAttribute="centerX" secondItem="62" secondAttribute="centerX" id="vYY-az-HfN"/>
+                            <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" id="zex-1Y-ngl"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-IQ-dyD" userLabel="Change Background Button">
+                        <rect key="frame" x="288" y="153" width="26" height="26"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="mbJ-WB-CS5"/>
+                            <constraint firstAttribute="height" constant="26" id="qTz-jQ-PaZ"/>
+                        </constraints>
+                        <state key="normal" image="background-photo-update">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="changeBackground:" destination="-1" eventType="touchUpInside" id="viJ-dh-C2g"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="21" firstAttribute="leading" secondItem="crV-Zt-Oxw" secondAttribute="leading" id="0QJ-FO-5Il"/>
+                    <constraint firstAttribute="bottom" secondItem="FEa-IQ-dyD" secondAttribute="bottom" id="MRD-LI-6WS"/>
+                    <constraint firstItem="21" firstAttribute="top" secondItem="crV-Zt-Oxw" secondAttribute="top" id="Nbu-yD-Exy"/>
+                    <constraint firstAttribute="trailing" secondItem="FEa-IQ-dyD" secondAttribute="trailing" constant="6" id="UyX-ld-CQ6"/>
+                    <constraint firstAttribute="bottom" secondItem="21" secondAttribute="bottom" id="pTl-Zn-gRE"/>
+                    <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="wL4-5C-hAc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="backgroundBlurredImageView" destination="PPZ-Na-vS8" id="Bmk-BS-XdB"/>
+                <outlet property="backgroundButton" destination="FEa-IQ-dyD" id="gsJ-YY-1dD"/>
+                <outlet property="backgroundImageConstraintBottom" destination="FJH-ga-0KA" id="lcZ-Sr-G7o"/>
+                <outlet property="backgroundImageView" destination="n92-W2-ezE" id="l54-uc-HAu"/>
+                <outlet property="calendar" destination="22" id="MMm-Ai-w7Q"/>
+                <outlet property="calendarConstraintHeight" destination="tNy-0o-jIo" id="YET-Mk-61l"/>
+                <outlet property="calendarConstraintTop" destination="clv-A4-wR8" id="Edx-mV-fre"/>
+                <outlet property="calendarContainerView" destination="21" id="2PM-K3-YUl"/>
+                <outlet property="containerConstraintTop" destination="Nbu-yD-Exy" id="tla-ta-Gl4"/>
+                <outlet property="indicator" destination="62" id="kRq-Ua-AAo"/>
+                <outlet property="indicatorArrow" destination="69" id="t9b-QS-TDt"/>
+                <outlet property="indicatorConstraintTop" destination="fmV-zV-ueU" id="g2C-k4-Koq"/>
+                <outlet property="tinyCalendar" destination="23" id="GCZ-QZ-gZh"/>
+                <outlet property="tinyCalendarConstraintTop" destination="15i-MW-3RN" id="VOe-DP-1If"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="background-photo-update" width="26" height="26"/>
+        <image name="home-babies.jpeg" width="320" height="370"/>
+        <image name="pulldown-arrow" width="25" height="25"/>
+    </resources>
+</document>
